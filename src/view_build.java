@@ -258,6 +258,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         selectPartPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableParts = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("1");
@@ -272,7 +273,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         lb_buildName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_buildName.setText("Build Name");
         buildPanel.add(lb_buildName);
-        lb_buildName.setBounds(20, 10, 630, 40);
+        lb_buildName.setBounds(130, 140, 630, 40);
 
         jTableBuild.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -293,7 +294,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     jScrollPane1.setViewportView(jTableBuild);
 
     buildPanel.add(jScrollPane1);
-    jScrollPane1.setBounds(190, 60, 300, 200);
+    jScrollPane1.setBounds(160, 230, 560, 200);
 
     goBack.setText("Go Back");
     goBack.setToolTipText("");
@@ -303,7 +304,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         }
     });
     buildPanel.add(goBack);
-    goBack.setBounds(10, 300, 71, 23);
+    goBack.setBounds(20, 610, 100, 23);
 
     btn_editBuild.setText("Edit");
     btn_editBuild.addActionListener(new java.awt.event.ActionListener() {
@@ -312,10 +313,10 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         }
     });
     buildPanel.add(btn_editBuild);
-    btn_editBuild.setBounds(290, 270, 51, 23);
+    btn_editBuild.setBounds(420, 450, 51, 23);
 
     getContentPane().add(buildPanel);
-    buildPanel.setBounds(0, 40, 660, 380);
+    buildPanel.setBounds(0, 0, 900, 710);
 
     selectPartPanel.setMaximumSize(new java.awt.Dimension(900, 700));
     selectPartPanel.setMinimumSize(new java.awt.Dimension(900, 700));
@@ -338,10 +339,34 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     });
     jScrollPane3.setViewportView(jTableParts);
 
-    selectPartPanel.add(jScrollPane3);
+    jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+    jLabel1.setText("Edit Component");
+
+    javax.swing.GroupLayout selectPartPanelLayout = new javax.swing.GroupLayout(selectPartPanel);
+    selectPartPanel.setLayout(selectPartPanelLayout);
+    selectPartPanelLayout.setHorizontalGroup(
+        selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(selectPartPanelLayout.createSequentialGroup()
+            .addGap(84, 84, 84)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(87, Short.MAX_VALUE))
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectPartPanelLayout.createSequentialGroup()
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(301, 301, 301))
+    );
+    selectPartPanelLayout.setVerticalGroup(
+        selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(selectPartPanelLayout.createSequentialGroup()
+            .addGap(42, 42, 42)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addContainerGap(64, Short.MAX_VALUE))
+    );
 
     getContentPane().add(selectPartPanel);
-    selectPartPanel.setBounds(0, 0, 670, 430);
+    selectPartPanel.setBounds(0, 0, 900, 710);
 
     pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -415,6 +440,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     private javax.swing.JButton btn_editBuild;
     private javax.swing.JPanel buildPanel;
     private javax.swing.JButton goBack;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTableBuild;

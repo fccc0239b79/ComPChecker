@@ -327,7 +327,7 @@ public class user_menu extends javax.swing.JFrame {
         getContentPane().add(MenuPanel);
         MenuPanel.setBounds(-1, -1, 900, 710);
 
-        ProfilePanel.setBackground(new java.awt.Color(255, 255, 204));
+        ProfilePanel.setBackground(new java.awt.Color(255, 255, 255));
         ProfilePanel.setMaximumSize(new java.awt.Dimension(830, 440));
         ProfilePanel.setMinimumSize(new java.awt.Dimension(830, 440));
         ProfilePanel.setPreferredSize(new java.awt.Dimension(830, 440));
@@ -371,7 +371,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         ProfilePanel.add(goBack);
-        goBack.setBounds(10, 360, 71, 23);
+        goBack.setBounds(60, 320, 100, 23);
 
         getContentPane().add(ProfilePanel);
         ProfilePanel.setBounds(30, 54, 840, 440);

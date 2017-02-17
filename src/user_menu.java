@@ -103,24 +103,9 @@ public class user_menu extends javax.swing.JFrame {
         btnNewComponent = new javax.swing.JButton();
         btnEditBuild = new javax.swing.JButton();
         btnEditAcc = new javax.swing.JButton();
-<<<<<<< Updated upstream
         jPanel1 = new javax.swing.JPanel();
         profileBtn = new javax.swing.JButton();
         logOffBtn = new javax.swing.JButton();
-=======
-<<<<<<< HEAD
-        MenuPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        buildsList = new javax.swing.JList<>();
-        addBuildBtn = new javax.swing.JButton();
-=======
-        jPanel1 = new javax.swing.JPanel();
-        profileBtn = new javax.swing.JButton();
-        logOffBtn = new javax.swing.JButton();
->>>>>>> origin/master
->>>>>>> Stashed changes
         ProfilePanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fname = new javax.swing.JLabel();
@@ -164,39 +149,8 @@ public class user_menu extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(buildsList);
 
-<<<<<<< Updated upstream
         MenuPanel.add(jScrollPane1);
         jScrollPane1.setBounds(240, 260, 410, 140);
-=======
-<<<<<<< HEAD
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(376, Short.MAX_VALUE)
-                .addComponent(profileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logOffBtn)
-                .addGap(19, 19, 19))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(profileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(logOffBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 559, 51);
-=======
-        MenuPanel.add(jScrollPane1);
-        jScrollPane1.setBounds(240, 260, 410, 140);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         adminMenu.setBackground(new java.awt.Color(255, 255, 204));
         adminMenu.setMaximumSize(new java.awt.Dimension(900, 700));
@@ -219,15 +173,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnEditComp);
-<<<<<<< Updated upstream
         btnEditComp.setBounds(340, 120, 117, 23);
-=======
-<<<<<<< HEAD
-        btnEditComp.setBounds(190, 100, 145, 29);
-=======
-        btnEditComp.setBounds(340, 120, 117, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnCreateAcc.setText("Create Account");
         btnCreateAcc.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -239,15 +185,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnCreateAcc);
-<<<<<<< Updated upstream
         btnCreateAcc.setBounds(200, 90, 120, 23);
-=======
-<<<<<<< HEAD
-        btnCreateAcc.setBounds(30, 70, 140, 29);
-=======
-        btnCreateAcc.setBounds(200, 90, 120, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnDeleteAcc.setText("View Accounts");
         btnDeleteAcc.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -259,15 +197,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnDeleteAcc);
-<<<<<<< Updated upstream
         btnDeleteAcc.setBounds(340, 90, 117, 23);
-=======
-<<<<<<< HEAD
-        btnDeleteAcc.setBounds(170, 70, 136, 29);
-=======
-        btnDeleteAcc.setBounds(340, 90, 117, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnAddComp.setText("View Components");
         btnAddComp.addActionListener(new java.awt.event.ActionListener() {
@@ -276,15 +206,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnAddComp);
-<<<<<<< Updated upstream
         btnAddComp.setBounds(200, 120, 120, 23);
-=======
-<<<<<<< HEAD
-        btnAddComp.setBounds(30, 100, 157, 29);
-=======
-        btnAddComp.setBounds(200, 120, 120, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnCreateBuild.setText("Create Build");
         btnCreateBuild.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -296,15 +218,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnCreateBuild);
-<<<<<<< Updated upstream
         btnCreateBuild.setBounds(200, 150, 120, 23);
-=======
-<<<<<<< HEAD
-        btnCreateBuild.setBounds(40, 130, 119, 29);
-=======
-        btnCreateBuild.setBounds(200, 150, 120, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnViewBuild.setText("View Builds");
         btnViewBuild.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -316,15 +230,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnViewBuild);
-<<<<<<< Updated upstream
         btnViewBuild.setBounds(480, 90, 120, 23);
-=======
-<<<<<<< HEAD
-        btnViewBuild.setBounds(310, 70, 115, 29);
-=======
-        btnViewBuild.setBounds(480, 90, 120, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnAddMake.setText("Add New Make");
         btnAddMake.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -336,15 +242,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnAddMake);
-<<<<<<< Updated upstream
         btnAddMake.setBounds(480, 150, 117, 23);
-=======
-<<<<<<< HEAD
-        btnAddMake.setBounds(380, 130, 137, 29);
-=======
-        btnAddMake.setBounds(480, 150, 117, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnNewComponent.setText("New Component");
         btnNewComponent.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -356,15 +254,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnNewComponent);
-<<<<<<< Updated upstream
         btnNewComponent.setBounds(480, 120, 117, 23);
-=======
-<<<<<<< HEAD
-        btnNewComponent.setBounds(330, 100, 148, 29);
-=======
-        btnNewComponent.setBounds(480, 120, 117, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnEditBuild.setText("Edit Build");
         btnEditBuild.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -376,15 +266,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnEditBuild);
-<<<<<<< Updated upstream
         btnEditBuild.setBounds(630, 90, 100, 23);
-=======
-<<<<<<< HEAD
-        btnEditBuild.setBounds(280, 130, 103, 29);
-=======
-        btnEditBuild.setBounds(630, 90, 100, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         btnEditAcc.setText("Edit Account");
         btnEditAcc.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -396,42 +278,13 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnEditAcc);
-<<<<<<< Updated upstream
         btnEditAcc.setBounds(340, 150, 120, 23);
-=======
-<<<<<<< HEAD
-        btnEditAcc.setBounds(160, 130, 124, 29);
-=======
-        btnEditAcc.setBounds(340, 150, 120, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         MenuPanel.add(adminMenu);
         adminMenu.setBounds(0, 520, 900, 180);
         adminMenu.setVisible(false);
 
-<<<<<<< Updated upstream
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-=======
-<<<<<<< HEAD
-        MenuPanel.setBackground(new java.awt.Color(255, 255, 255));
-        MenuPanel.setMaximumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setMinimumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setPreferredSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
-        jLabel1.setText("MENU");
-        MenuPanel.add(jLabel1);
-        jLabel1.setBounds(190, 20, 145, 60);
-
-        jLabel3.setText("View/Edit builds ");
-        MenuPanel.add(jLabel3);
-        jLabel3.setBounds(200, 90, 110, 16);
-=======
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         profileBtn.setText("Profile");
         profileBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -470,18 +323,6 @@ public class user_menu extends javax.swing.JFrame {
 
         MenuPanel.add(jPanel1);
         jPanel1.setBounds(737, 10, 160, 60);
-<<<<<<< Updated upstream
-=======
-
-        addBuildBtn.setText("Add Build");
-        addBuildBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addBuildBtnActionPerformed(evt);
-            }
-        });
-        MenuPanel.add(addBuildBtn);
-        addBuildBtn.setBounds(190, 200, 110, 29);
->>>>>>> Stashed changes
 
         getContentPane().add(MenuPanel);
         MenuPanel.setBounds(-1, -1, 900, 710);
@@ -495,7 +336,6 @@ public class user_menu extends javax.swing.JFrame {
 
         jLabel2.setText("Fname");
         ProfilePanel.add(jLabel2);
-<<<<<<< Updated upstream
         jLabel2.setBounds(70, 110, 70, 14);
 
         fname.setText("Fname");
@@ -517,53 +357,6 @@ public class user_menu extends javax.swing.JFrame {
         email.setText("email");
         ProfilePanel.add(email);
         email.setBounds(160, 170, 230, 14);
-=======
-<<<<<<< HEAD
-        jLabel2.setBounds(67, 114, 41, 16);
-
-        fname.setText("Fname");
-        ProfilePanel.add(fname);
-        fname.setBounds(114, 114, 140, 16);
-
-        jLabel4.setText("Sname");
-        ProfilePanel.add(jLabel4);
-        jLabel4.setBounds(70, 140, 41, 16);
-
-        sname.setText("Sname");
-        ProfilePanel.add(sname);
-        sname.setBounds(120, 140, 160, 16);
-
-        jLabel6.setText("email");
-        ProfilePanel.add(jLabel6);
-        jLabel6.setBounds(60, 170, 34, 16);
-
-        email.setText("email");
-        ProfilePanel.add(email);
-        email.setBounds(120, 170, 230, 16);
-=======
-        jLabel2.setBounds(70, 110, 70, 14);
-
-        fname.setText("Fname");
-        ProfilePanel.add(fname);
-        fname.setBounds(160, 110, 140, 14);
-
-        jLabel4.setText("Sname");
-        ProfilePanel.add(jLabel4);
-        jLabel4.setBounds(70, 140, 70, 14);
-
-        sname.setText("Sname");
-        ProfilePanel.add(sname);
-        sname.setBounds(160, 140, 160, 14);
-
-        jLabel6.setText("email");
-        ProfilePanel.add(jLabel6);
-        jLabel6.setBounds(70, 170, 60, 14);
-
-        email.setText("email");
-        ProfilePanel.add(email);
-        email.setBounds(160, 170, 230, 14);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
         jLabel5.setText("Profile");
@@ -578,15 +371,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         ProfilePanel.add(goBack);
-<<<<<<< Updated upstream
         goBack.setBounds(60, 320, 100, 23);
-=======
-<<<<<<< HEAD
-        goBack.setBounds(10, 360, 94, 29);
-=======
-        goBack.setBounds(60, 320, 100, 23);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         getContentPane().add(ProfilePanel);
         ProfilePanel.setBounds(30, 54, 840, 440);
@@ -744,22 +529,6 @@ public class user_menu extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_buildsListMouseClicked
 
-    private void addBuildBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBuildBtnActionPerformed
-       
-        
-        String username = currentUser.getUsername();
-        
-        view_build frm = new view_build(currentUser); //
-        this.dispose();
-        frm.setVisible(true);
-        
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_addBuildBtnActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -803,7 +572,6 @@ public class user_menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MenuPanel;
     private javax.swing.JPanel ProfilePanel;
-    private javax.swing.JButton addBuildBtn;
     private javax.swing.JPanel adminMenu;
     private javax.swing.JButton btnAddComp;
     private javax.swing.JButton btnAddMake;

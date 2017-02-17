@@ -86,9 +86,6 @@ public class user_menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        profileBtn = new javax.swing.JButton();
-        logOffBtn = new javax.swing.JButton();
         MenuPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -106,6 +103,9 @@ public class user_menu extends javax.swing.JFrame {
         btnNewComponent = new javax.swing.JButton();
         btnEditBuild = new javax.swing.JButton();
         btnEditAcc = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        profileBtn = new javax.swing.JButton();
+        logOffBtn = new javax.swing.JButton();
         ProfilePanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fname = new javax.swing.JLabel();
@@ -121,6 +121,170 @@ public class user_menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(900, 700));
         setPreferredSize(new java.awt.Dimension(900, 700));
         getContentPane().setLayout(null);
+
+        MenuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MenuPanel.setMaximumSize(new java.awt.Dimension(900, 700));
+        MenuPanel.setMinimumSize(new java.awt.Dimension(900, 700));
+        MenuPanel.setPreferredSize(new java.awt.Dimension(900, 700));
+        MenuPanel.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
+        jLabel1.setText("MENU");
+        MenuPanel.add(jLabel1);
+        jLabel1.setBounds(370, 160, 128, 60);
+
+        jLabel3.setText("View/Edit builds ");
+        MenuPanel.add(jLabel3);
+        jLabel3.setBounds(400, 240, 110, 14);
+
+        buildsList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        buildsList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buildsListMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(buildsList);
+
+        MenuPanel.add(jScrollPane1);
+        jScrollPane1.setBounds(240, 260, 410, 140);
+
+        adminMenu.setBackground(new java.awt.Color(255, 255, 204));
+        adminMenu.setMaximumSize(new java.awt.Dimension(900, 700));
+        adminMenu.setMinimumSize(new java.awt.Dimension(900, 700));
+        adminMenu.setPreferredSize(new java.awt.Dimension(900, 700));
+        adminMenu.setLayout(null);
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
+        jLabel7.setText("Admin");
+        adminMenu.add(jLabel7);
+        jLabel7.setBounds(360, 20, 170, 60);
+
+        btnEditComp.setText("Edit Component");
+        btnEditComp.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnEditComp.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnEditComp.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnEditComp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditCompActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnEditComp);
+        btnEditComp.setBounds(340, 120, 117, 23);
+
+        btnCreateAcc.setText("Create Account");
+        btnCreateAcc.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnCreateAcc.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnCreateAcc.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnCreateAcc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateAccActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnCreateAcc);
+        btnCreateAcc.setBounds(200, 90, 120, 23);
+
+        btnDeleteAcc.setText("View Accounts");
+        btnDeleteAcc.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnDeleteAcc.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnDeleteAcc.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteAccActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnDeleteAcc);
+        btnDeleteAcc.setBounds(340, 90, 117, 23);
+
+        btnAddComp.setText("View Components");
+        btnAddComp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddCompActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnAddComp);
+        btnAddComp.setBounds(200, 120, 120, 23);
+
+        btnCreateBuild.setText("Create Build");
+        btnCreateBuild.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnCreateBuild.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnCreateBuild.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnCreateBuild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateBuildActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnCreateBuild);
+        btnCreateBuild.setBounds(200, 150, 120, 23);
+
+        btnViewBuild.setText("View Builds");
+        btnViewBuild.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnViewBuild.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnViewBuild.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnViewBuild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewBuildActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnViewBuild);
+        btnViewBuild.setBounds(480, 90, 120, 23);
+
+        btnAddMake.setText("Add New Make");
+        btnAddMake.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnAddMake.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnAddMake.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnAddMake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddMakeActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnAddMake);
+        btnAddMake.setBounds(480, 150, 117, 23);
+
+        btnNewComponent.setText("New Component");
+        btnNewComponent.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnNewComponent.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnNewComponent.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnNewComponent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewComponentActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnNewComponent);
+        btnNewComponent.setBounds(480, 120, 117, 23);
+
+        btnEditBuild.setText("Edit Build");
+        btnEditBuild.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnEditBuild.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnEditBuild.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnEditBuild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditBuildActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnEditBuild);
+        btnEditBuild.setBounds(630, 90, 100, 23);
+
+        btnEditAcc.setText("Edit Account");
+        btnEditAcc.setMaximumSize(new java.awt.Dimension(117, 23));
+        btnEditAcc.setMinimumSize(new java.awt.Dimension(117, 23));
+        btnEditAcc.setPreferredSize(new java.awt.Dimension(117, 23));
+        btnEditAcc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditAccActionPerformed(evt);
+            }
+        });
+        adminMenu.add(btnEditAcc);
+        btnEditAcc.setBounds(340, 150, 120, 23);
+
+        MenuPanel.add(adminMenu);
+        adminMenu.setBounds(0, 520, 900, 180);
+        adminMenu.setVisible(false);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         profileBtn.setText("Profile");
         profileBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -140,12 +304,12 @@ public class user_menu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(376, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(profileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(logOffBtn)
-                .addGap(19, 19, 19))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,181 +321,42 @@ public class user_menu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 537, 61);
-
-        MenuPanel.setBackground(new java.awt.Color(255, 255, 255));
-        MenuPanel.setMaximumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setMinimumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setPreferredSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
-        jLabel1.setText("MENU");
-        MenuPanel.add(jLabel1);
-        jLabel1.setBounds(190, 20, 128, 60);
-
-        jLabel3.setText("View/Edit builds ");
-        MenuPanel.add(jLabel3);
-        jLabel3.setBounds(200, 90, 110, 14);
-
-        buildsList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        buildsList.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buildsListMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(buildsList);
-
-        MenuPanel.add(jScrollPane1);
-        jScrollPane1.setBounds(160, 110, 180, 90);
-
-        adminMenu.setBackground(new java.awt.Color(255, 255, 204));
-        adminMenu.setMaximumSize(new java.awt.Dimension(547, 165));
-        adminMenu.setMinimumSize(new java.awt.Dimension(547, 165));
-        adminMenu.setPreferredSize(new java.awt.Dimension(547, 165));
-        adminMenu.setLayout(null);
-
-        jLabel7.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
-        jLabel7.setText("Admin");
-        adminMenu.add(jLabel7);
-        jLabel7.setBounds(190, 0, 170, 60);
-
-        btnEditComp.setText("Edit Component");
-        btnEditComp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditCompActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnEditComp);
-        btnEditComp.setBounds(190, 100, 109, 23);
-
-        btnCreateAcc.setText("Create Account");
-        btnCreateAcc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateAccActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnCreateAcc);
-        btnCreateAcc.setBounds(30, 70, 107, 23);
-
-        btnDeleteAcc.setText("View Accounts");
-        btnDeleteAcc.setMaximumSize(new java.awt.Dimension(107, 23));
-        btnDeleteAcc.setMinimumSize(new java.awt.Dimension(107, 23));
-        btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteAccActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnDeleteAcc);
-        btnDeleteAcc.setBounds(170, 70, 101, 23);
-
-        btnAddComp.setText("View Components");
-        btnAddComp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddCompActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnAddComp);
-        btnAddComp.setBounds(30, 100, 117, 23);
-
-        btnCreateBuild.setText("Create Build");
-        btnCreateBuild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateBuildActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnCreateBuild);
-        btnCreateBuild.setBounds(40, 130, 91, 23);
-
-        btnViewBuild.setText("View Builds");
-        btnViewBuild.setMaximumSize(new java.awt.Dimension(107, 23));
-        btnViewBuild.setMinimumSize(new java.awt.Dimension(107, 23));
-        btnViewBuild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewBuildActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnViewBuild);
-        btnViewBuild.setBounds(310, 70, 85, 23);
-
-        btnAddMake.setText("Add New Make");
-        btnAddMake.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddMakeActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnAddMake);
-        btnAddMake.setBounds(380, 130, 103, 23);
-
-        btnNewComponent.setText("New Component");
-        btnNewComponent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNewComponentActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnNewComponent);
-        btnNewComponent.setBounds(330, 100, 111, 23);
-
-        btnEditBuild.setText("Edit Build");
-        btnEditBuild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditBuildActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnEditBuild);
-        btnEditBuild.setBounds(280, 130, 75, 23);
-
-        btnEditAcc.setText("Edit Account");
-        btnEditAcc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditAccActionPerformed(evt);
-            }
-        });
-        adminMenu.add(btnEditAcc);
-        btnEditAcc.setBounds(160, 130, 93, 23);
-
-        MenuPanel.add(adminMenu);
-        adminMenu.setBounds(-20, 250, 547, 180);
-        adminMenu.setVisible(false);
+        MenuPanel.add(jPanel1);
+        jPanel1.setBounds(737, 10, 160, 60);
 
         getContentPane().add(MenuPanel);
-        MenuPanel.setBounds(29, 59, 500, 435);
+        MenuPanel.setBounds(-1, -1, 900, 710);
 
         ProfilePanel.setBackground(new java.awt.Color(255, 255, 204));
-        ProfilePanel.setMaximumSize(new java.awt.Dimension(500, 500));
-        ProfilePanel.setMinimumSize(new java.awt.Dimension(500, 500));
-        ProfilePanel.setPreferredSize(new java.awt.Dimension(500, 500));
+        ProfilePanel.setMaximumSize(new java.awt.Dimension(830, 440));
+        ProfilePanel.setMinimumSize(new java.awt.Dimension(830, 440));
+        ProfilePanel.setPreferredSize(new java.awt.Dimension(830, 440));
         ProfilePanel.setRequestFocusEnabled(false);
         ProfilePanel.setLayout(null);
 
         jLabel2.setText("Fname");
         ProfilePanel.add(jLabel2);
-        jLabel2.setBounds(67, 114, 32, 14);
+        jLabel2.setBounds(70, 110, 70, 14);
 
         fname.setText("Fname");
         ProfilePanel.add(fname);
-        fname.setBounds(114, 114, 140, 14);
+        fname.setBounds(160, 110, 140, 14);
 
         jLabel4.setText("Sname");
         ProfilePanel.add(jLabel4);
-        jLabel4.setBounds(70, 140, 32, 14);
+        jLabel4.setBounds(70, 140, 70, 14);
 
         sname.setText("Sname");
         ProfilePanel.add(sname);
-        sname.setBounds(120, 140, 160, 14);
+        sname.setBounds(160, 140, 160, 14);
 
         jLabel6.setText("email");
         ProfilePanel.add(jLabel6);
-        jLabel6.setBounds(60, 170, 24, 14);
+        jLabel6.setBounds(70, 170, 60, 14);
 
         email.setText("email");
         ProfilePanel.add(email);
-        email.setBounds(120, 170, 230, 14);
+        email.setBounds(160, 170, 230, 14);
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
         jLabel5.setText("Profile");
@@ -349,7 +374,7 @@ public class user_menu extends javax.swing.JFrame {
         goBack.setBounds(10, 360, 71, 23);
 
         getContentPane().add(ProfilePanel);
-        ProfilePanel.setBounds(30, 54, 500, 440);
+        ProfilePanel.setBounds(30, 54, 840, 440);
         ProfilePanel.setVisible(false);
 
         pack();

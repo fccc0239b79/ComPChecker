@@ -33,7 +33,7 @@ public class view_build extends javax.swing.JFrame {
     UserAccount currentUser;
     
     public view_build(){
-         this.setTitle("Builds View");     //Adds a title to the frame
+        this.setTitle("Builds View");     //Adds a title to the frame
         setLocationRelativeTo(null);
     }
     public view_build(UserAccount user,String buildName) {
@@ -260,6 +260,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         jTableParts = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("1");
         setMaximumSize(new java.awt.Dimension(900, 700));
         setMinimumSize(new java.awt.Dimension(900, 700));
         setSize(new java.awt.Dimension(900, 700));

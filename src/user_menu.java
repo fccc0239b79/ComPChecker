@@ -89,6 +89,11 @@ public class user_menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         profileBtn = new javax.swing.JButton();
         logOffBtn = new javax.swing.JButton();
+        MenuPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        buildsList = new javax.swing.JList<>();
         adminMenu = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         btnEditComp = new javax.swing.JButton();
@@ -101,11 +106,6 @@ public class user_menu extends javax.swing.JFrame {
         btnNewComponent = new javax.swing.JButton();
         btnEditBuild = new javax.swing.JButton();
         btnEditAcc = new javax.swing.JButton();
-        MenuPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        buildsList = new javax.swing.JList<>();
         ProfilePanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         fname = new javax.swing.JLabel();
@@ -159,6 +159,36 @@ public class user_menu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 537, 61);
+
+        MenuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MenuPanel.setMaximumSize(new java.awt.Dimension(500, 500));
+        MenuPanel.setMinimumSize(new java.awt.Dimension(500, 500));
+        MenuPanel.setPreferredSize(new java.awt.Dimension(500, 500));
+        MenuPanel.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
+        jLabel1.setText("MENU");
+        MenuPanel.add(jLabel1);
+        jLabel1.setBounds(190, 20, 128, 60);
+
+        jLabel3.setText("View/Edit builds ");
+        MenuPanel.add(jLabel3);
+        jLabel3.setBounds(200, 90, 110, 14);
+
+        buildsList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        buildsList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buildsListMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(buildsList);
+
+        MenuPanel.add(jScrollPane1);
+        jScrollPane1.setBounds(160, 110, 180, 90);
 
         adminMenu.setBackground(new java.awt.Color(255, 255, 204));
         adminMenu.setMaximumSize(new java.awt.Dimension(547, 165));
@@ -265,39 +295,9 @@ public class user_menu extends javax.swing.JFrame {
         adminMenu.add(btnEditAcc);
         btnEditAcc.setBounds(160, 130, 93, 23);
 
-        getContentPane().add(adminMenu);
-        adminMenu.setBounds(10, 310, 547, 180);
+        MenuPanel.add(adminMenu);
+        adminMenu.setBounds(-20, 250, 547, 180);
         adminMenu.setVisible(false);
-
-        MenuPanel.setBackground(new java.awt.Color(255, 255, 255));
-        MenuPanel.setMaximumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setMinimumSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setPreferredSize(new java.awt.Dimension(500, 500));
-        MenuPanel.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
-        jLabel1.setText("MENU");
-        MenuPanel.add(jLabel1);
-        jLabel1.setBounds(190, 20, 128, 60);
-
-        jLabel3.setText("View/Edit builds ");
-        MenuPanel.add(jLabel3);
-        jLabel3.setBounds(200, 90, 110, 14);
-
-        buildsList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        buildsList.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buildsListMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(buildsList);
-
-        MenuPanel.add(jScrollPane1);
-        jScrollPane1.setBounds(160, 110, 180, 90);
 
         getContentPane().add(MenuPanel);
         MenuPanel.setBounds(29, 59, 500, 435);

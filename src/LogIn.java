@@ -162,7 +162,7 @@ public class LogIn extends javax.swing.JFrame {
         if (successful) {
             boolean type = user.getType(); // if details are correct returns type of user
             if (type == true) {
-                user_menu frm = new user_menu(user,true); //opens admin user form
+                AdminMenu frm = new AdminMenu(); //opens admin user form
                 this.setVisible(false);
                 frm.setVisible(true);
                 

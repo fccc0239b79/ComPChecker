@@ -121,7 +121,7 @@ public class CreateAccount extends javax.swing.JFrame {
 
         lblCreate.setText("Create Account:");
         getContentPane().add(lblCreate);
-        lblCreate.setBounds(361, 63, 79, 14);
+        lblCreate.setBounds(361, 63, 100, 14);
 
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class CreateAccount extends javax.swing.JFrame {
 
         jLabel1.setText("Welcome!");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(374, 38, 47, 14);
+        jLabel1.setBounds(374, 38, 60, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

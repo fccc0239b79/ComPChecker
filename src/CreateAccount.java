@@ -46,6 +46,8 @@ public class CreateAccount extends javax.swing.JFrame {
         passwordfield = new javax.swing.JPasswordField();
         passwordconfirmfield = new javax.swing.JPasswordField();
         lblCreate = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -59,22 +61,45 @@ public class CreateAccount extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(797, 382));
+        setMinimumSize(new java.awt.Dimension(797, 382));
+        setPreferredSize(new java.awt.Dimension(797, 382));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         lblusername.setText("Username:");
+        getContentPane().add(lblusername);
+        lblusername.setBounds(240, 100, 70, 14);
+        getContentPane().add(txtboxUsername);
+        txtboxUsername.setBounds(316, 95, 178, 20);
 
         lblPassword.setText("Password:");
+        getContentPane().add(lblPassword);
+        lblPassword.setBounds(240, 120, 60, 14);
 
         lblFname.setText("Forename:");
+        getContentPane().add(lblFname);
+        lblFname.setBounds(236, 176, 70, 14);
 
         lblSname.setText("Surname:");
+        getContentPane().add(lblSname);
+        lblSname.setBounds(240, 200, 70, 14);
 
         lblEmail.setText("Email:");
+        getContentPane().add(lblEmail);
+        lblEmail.setBounds(260, 230, 40, 14);
 
         txtboxName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtboxNameActionPerformed(evt);
             }
         });
+        getContentPane().add(txtboxName);
+        txtboxName.setBounds(316, 173, 178, 20);
+        getContentPane().add(txtboxSurname);
+        txtboxSurname.setBounds(316, 199, 178, 20);
+        getContentPane().add(txtboxEmail);
+        txtboxEmail.setBounds(316, 225, 178, 20);
 
         btnSubmit.setText("Create Account");
         btnSubmit.setActionCommand("CreateAccount");
@@ -83,81 +108,33 @@ public class CreateAccount extends javax.swing.JFrame {
                 btnSubmitActionPerformed(evt);
             }
         });
+        getContentPane().add(btnSubmit);
+        btnSubmit.setBounds(420, 290, 120, 23);
 
         lblConfPassword.setText("Confirm Password:");
+        getContentPane().add(lblConfPassword);
+        lblConfPassword.setBounds(200, 150, 110, 14);
+        getContentPane().add(passwordfield);
+        passwordfield.setBounds(316, 121, 178, 20);
+        getContentPane().add(passwordconfirmfield);
+        passwordconfirmfield.setBounds(316, 147, 178, 20);
 
         lblCreate.setText("Create Account:");
+        getContentPane().add(lblCreate);
+        lblCreate.setBounds(361, 63, 79, 14);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblusername)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblPassword)
-                                        .addGap(3, 3, 3))
-                                    .addComponent(lblConfPassword))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtboxUsername)
-                                    .addComponent(passwordfield)
-                                    .addComponent(passwordconfirmfield, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblFname)
-                                    .addComponent(lblSname)
-                                    .addComponent(lblEmail))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtboxName)
-                                    .addComponent(txtboxSurname)
-                                    .addComponent(txtboxEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))))
-                        .addGap(220, 220, 220))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblCreate)
-                        .addGap(274, 274, 274))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(lblCreate)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblusername)
-                    .addComponent(txtboxUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPassword)
-                    .addComponent(passwordfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfPassword)
-                    .addComponent(passwordconfirmfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFname)
-                    .addComponent(txtboxName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSname)
-                    .addComponent(txtboxSurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtboxEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSubmit)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(254, 290, 107, 23);
+
+        jLabel1.setText("Welcome!");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(374, 38, 47, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -243,6 +220,10 @@ public class CreateAccount extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnSubmitActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -280,6 +261,8 @@ public class CreateAccount extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLabel lblConfPassword;
     private javax.swing.JLabel lblCreate;

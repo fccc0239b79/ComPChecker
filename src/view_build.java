@@ -316,15 +316,11 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     getContentPane().add(buildPanel);
     buildPanel.setBounds(0, 40, 660, 380);
 
-<<<<<<< Updated upstream
     selectPartPanel.setMaximumSize(new java.awt.Dimension(900, 700));
     selectPartPanel.setMinimumSize(new java.awt.Dimension(900, 700));
     selectPartPanel.setPreferredSize(new java.awt.Dimension(900, 700));
 
-    jTable.setModel(new javax.swing.table.DefaultTableModel(
-=======
     jTableParts.setModel(new javax.swing.table.DefaultTableModel(
->>>>>>> Stashed changes
         new Object [][] {
 
         },

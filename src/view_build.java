@@ -36,46 +36,6 @@ public class view_build extends javax.swing.JFrame {
         this.setTitle("Builds View");     //Adds a title to the frame
         setLocationRelativeTo(null);
     }
-    public view_build(UserAccount user){
-        this.setTitle("New Build");     //Adds a title to the frame
-        setLocationRelativeTo(null);
-        initComponents();
-        
-        newBuild.setVisible(true);
-        
-        
-        currentUser = user;
-        
-        TableColumn colBuild = new TableColumn();
-        ArrayList<String> columns = new ArrayList<>();
-        columns.add("PC");
-        columns.add("Parts");
-
-        DefaultTableModel modelNew = (DefaultTableModel) NewBuildTable.getModel();
-        
-        TableColumn col1 = new TableColumn(modelNew.getColumnCount());
-        for (String temp : columns) { //Adds columns to table.
-            colBuild.setHeaderValue(temp);
-            NewBuildTable.addColumn(colBuild);
-            modelNew.addColumn(temp);
-        }
-        
-        
-        ArrayList<String> rows = new ArrayList<>();
-        rows.add("CPU");
-        rows.add("MotherBoard");
-        rows.add("GPU");
-        rows.add("PSU");
-        rows.add("RAM");
-        rows.add("Storage");
-        rows.add("PC Case");
-        rows.add("Cooler");
-        rows.add("Accessory");
-        for(String tempRow : rows){
-            modelNew.addRow(new Object[]{tempRow,"Select Part"});
-        }
-        
-    }
     public view_build(UserAccount user,String buildName) {
         currentUser = user;
                  Connection con = DatabaseConnection.establishConnection();
@@ -85,9 +45,6 @@ public class view_build extends javax.swing.JFrame {
         setLocationRelativeTo(null);    //Centers the frame in the middle of ths screen
         
         lb_buildName.setText(buildName);
-        
-        buildPanel.setVisible(true);
-        
         
         TableColumn colBuild = new TableColumn();
         ArrayList<String> columns = new ArrayList<>();
@@ -182,7 +139,6 @@ jTableBuild.addMouseListener(new MouseAdapter() {
             
        
         buildPanel.setVisible(false);
-        selectPartPanel.setVisible(true);
         //jTable.setVisible(true);
         
       //  initComponents();
@@ -299,25 +255,13 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         lb_buildName = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableBuild = new javax.swing.JTable();
+        goBack = new javax.swing.JButton();
         btn_editBuild = new javax.swing.JButton();
-        newBuild = new javax.swing.JPanel();
-        BuildNmaeTxt = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        NewBuildTable = new javax.swing.JTable();
         selectPartPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableParts = new javax.swing.JTable();
-<<<<<<< Updated upstream
         jLabel1 = new javax.swing.JLabel();
         CancelButton = new javax.swing.JButton();
-=======
-<<<<<<< HEAD
-        goBack = new javax.swing.JButton();
-=======
-        jLabel1 = new javax.swing.JLabel();
-        CancelButton = new javax.swing.JButton();
->>>>>>> origin/master
->>>>>>> Stashed changes
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("1");
@@ -326,7 +270,6 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         setSize(new java.awt.Dimension(900, 700));
         getContentPane().setLayout(null);
 
-        buildPanel.setMinimumSize(new java.awt.Dimension(900, 700));
         buildPanel.setLayout(null);
 
         lb_buildName.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
@@ -356,8 +299,6 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     buildPanel.add(jScrollPane1);
     jScrollPane1.setBounds(160, 230, 560, 200);
 
-<<<<<<< HEAD
-=======
     goBack.setText("Go Back");
     goBack.setToolTipText("");
     goBack.addActionListener(new java.awt.event.ActionListener() {
@@ -368,7 +309,6 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     buildPanel.add(goBack);
     goBack.setBounds(20, 610, 100, 23);
 
->>>>>>> origin/master
     btn_editBuild.setText("Edit");
     btn_editBuild.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,61 +316,10 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         }
     });
     buildPanel.add(btn_editBuild);
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    btn_editBuild.setBounds(290, 270, 75, 29);
-
-    getContentPane().add(buildPanel);
-    buildPanel.setBounds(0, 0, 660, 370);
-    buildPanel.setVisible(false);
-
-    newBuild.setPreferredSize(new java.awt.Dimension(900, 500));
-    newBuild.setLayout(null);
-
-    BuildNmaeTxt.setText("Build Name ");
-    BuildNmaeTxt.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            BuildNmaeTxtActionPerformed(evt);
-        }
-    });
-    newBuild.add(BuildNmaeTxt);
-    BuildNmaeTxt.setBounds(210, 20, 250, 26);
-
-    NewBuildTable.setModel(new javax.swing.table.DefaultTableModel(
-        new Object [][] {
-
-        },
-        new String [] {
-
-        }
-    )
-    {public boolean isCellEditable(int row, int column){return false;}}
-
-    );
-    NewBuildTable.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            NewBuildTableMouseClicked(evt);
-        }
-    });
-    jScrollPane2.setViewportView(NewBuildTable);
-
-    newBuild.add(jScrollPane2);
-    jScrollPane2.setBounds(180, 60, 300, 200);
-
-    getContentPane().add(newBuild);
-    newBuild.setBounds(139, -1, 530, 320);
-    newBuild.setVisible(false);
-=======
->>>>>>> Stashed changes
     btn_editBuild.setBounds(420, 450, 51, 23);
 
     getContentPane().add(buildPanel);
     buildPanel.setBounds(0, 0, 900, 710);
-<<<<<<< Updated upstream
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
 
     selectPartPanel.setMaximumSize(new java.awt.Dimension(900, 700));
     selectPartPanel.setMinimumSize(new java.awt.Dimension(900, 700));
@@ -492,26 +381,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     );
 
     getContentPane().add(selectPartPanel);
-<<<<<<< Updated upstream
     selectPartPanel.setBounds(0, 0, 900, 710);
-=======
-<<<<<<< HEAD
-    selectPartPanel.setBounds(0, 0, 670, 430);
-    selectPartPanel.setVisible(false);
-
-    goBack.setText("Go Back");
-    goBack.setToolTipText("");
-    goBack.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            goBackActionPerformed(evt);
-        }
-    });
-    getContentPane().add(goBack);
-    goBack.setBounds(10, 490, 94, 29);
-=======
-    selectPartPanel.setBounds(0, 0, 900, 710);
->>>>>>> origin/master
->>>>>>> Stashed changes
 
     pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -546,27 +416,11 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTablePartsMouseClicked
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-    private void BuildNmaeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuildNmaeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuildNmaeTxtActionPerformed
-
-    private void NewBuildTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NewBuildTableMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NewBuildTableMouseClicked
-=======
->>>>>>> Stashed changes
     private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
         
         selectPartPanel.setVisible(false);
         buildPanel.setVisible(true);
     }//GEN-LAST:event_CancelButtonActionPerformed
-<<<<<<< Updated upstream
-=======
->>>>>>> origin/master
->>>>>>> Stashed changes
 
     /**
      * @param args the command line arguments
@@ -604,27 +458,16 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< Updated upstream
     private javax.swing.JButton CancelButton;
-=======
-<<<<<<< HEAD
-    private javax.swing.JTextField BuildNmaeTxt;
-    private javax.swing.JTable NewBuildTable;
-=======
-    private javax.swing.JButton CancelButton;
->>>>>>> origin/master
->>>>>>> Stashed changes
     private javax.swing.JButton btn_editBuild;
     private javax.swing.JPanel buildPanel;
     private javax.swing.JButton goBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTableBuild;
     private javax.swing.JTable jTableParts;
     private javax.swing.JLabel lb_buildName;
-    private javax.swing.JPanel newBuild;
     private javax.swing.JPanel selectPartPanel;
     // End of variables declaration//GEN-END:variables
 }

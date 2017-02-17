@@ -35,11 +35,53 @@ public class view_build extends javax.swing.JFrame {
     public view_build(){
         this.setTitle("Builds View");     //Adds a title to the frame
         setLocationRelativeTo(null);
+    } public view_build(UserAccount user){
+        this.setTitle("New Build");     //Adds a title to the frame
+        setLocationRelativeTo(null);
+        initComponents();
+        
+        NewBuild.setVisible(true);
+        
+        
+        currentUser = user;
+        
+        TableColumn colBuild = new TableColumn();
+        ArrayList<String> columns = new ArrayList<>();
+        columns.add("PC");
+        columns.add("Parts");
+
+        DefaultTableModel modelNew = (DefaultTableModel) NewBuildTable.getModel();
+        
+        TableColumn col1 = new TableColumn(modelNew.getColumnCount());
+        for (String temp : columns) { //Adds columns to table.
+            colBuild.setHeaderValue(temp);
+            NewBuildTable.addColumn(colBuild);
+            modelNew.addColumn(temp);
+        }
+        
+        
+        ArrayList<String> rows = new ArrayList<>();
+        rows.add("CPU");
+        rows.add("MotherBoard");
+        rows.add("GPU");
+        rows.add("PSU");
+        rows.add("RAM");
+        rows.add("Storage");
+        rows.add("PC Case");
+        rows.add("Cooler");
+        rows.add("Accessory");
+        for(String tempRow : rows){
+            modelNew.addRow(new Object[]{tempRow,"Select Part"});
+        }
+        
     }
     public view_build(UserAccount user,String buildName) {
         currentUser = user;
                  Connection con = DatabaseConnection.establishConnection();
 
+                 
+                 
+         buildPanel.setVisible(true);
         initComponents();
         this.setTitle("View Builds");     //Adds a title to the frame
         setLocationRelativeTo(null);    //Centers the frame in the middle of ths screen
@@ -139,6 +181,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
             
        
         buildPanel.setVisible(false);
+        selectPartPanel.setVisible(true);
         //jTable.setVisible(true);
         
       //  initComponents();
@@ -262,6 +305,10 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         jTableParts = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         CancelButton = new javax.swing.JButton();
+        NewBuild = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        NewBuildTable = new javax.swing.JTable();
+        goBack1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("1");
@@ -307,7 +354,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         }
     });
     buildPanel.add(goBack);
-    goBack.setBounds(20, 610, 100, 23);
+    goBack.setBounds(20, 610, 100, 29);
 
     btn_editBuild.setText("Edit");
     btn_editBuild.addActionListener(new java.awt.event.ActionListener() {
@@ -316,10 +363,11 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         }
     });
     buildPanel.add(btn_editBuild);
-    btn_editBuild.setBounds(420, 450, 51, 23);
+    btn_editBuild.setBounds(420, 450, 75, 29);
 
     getContentPane().add(buildPanel);
     buildPanel.setBounds(0, 0, 900, 710);
+    buildPanel.setVisible(false);
 
     selectPartPanel.setMaximumSize(new java.awt.Dimension(900, 700));
     selectPartPanel.setMinimumSize(new java.awt.Dimension(900, 700));
@@ -382,6 +430,44 @@ jTableBuild.addMouseListener(new MouseAdapter() {
 
     getContentPane().add(selectPartPanel);
     selectPartPanel.setBounds(0, 0, 900, 710);
+    selectPartPanel.setVisible(false);
+
+    NewBuild.setLayout(null);
+
+    NewBuildTable.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+
+        },
+        new String [] {
+
+        }
+    )
+    {public boolean isCellEditable(int row, int column){return false;}}
+
+    );
+    NewBuildTable.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            NewBuildTableMouseClicked(evt);
+        }
+    });
+    jScrollPane2.setViewportView(NewBuildTable);
+
+    NewBuild.add(jScrollPane2);
+    jScrollPane2.setBounds(160, 230, 560, 200);
+
+    goBack1.setText("Go Back");
+    goBack1.setToolTipText("");
+    goBack1.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            goBack1ActionPerformed(evt);
+        }
+    });
+    NewBuild.add(goBack1);
+    goBack1.setBounds(20, 610, 100, 29);
+
+    getContentPane().add(NewBuild);
+    NewBuild.setBounds(0, 0, 900, 710);
+    NewBuild.setVisible(false);
 
     pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -422,6 +508,25 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         buildPanel.setVisible(true);
     }//GEN-LAST:event_CancelButtonActionPerformed
 
+    private void NewBuildTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NewBuildTableMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NewBuildTableMouseClicked
+
+    private void goBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBack1ActionPerformed
+ user_menu   frm;
+        if(currentUser.getType() == true){
+             frm = new user_menu(currentUser,true); //opens admin user form
+        
+         
+        }else{
+            
+            frm = new user_menu(currentUser);
+        
+        }
+        this.dispose();
+        frm.setVisible(true);
+    }//GEN-LAST:event_goBack1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -459,11 +564,15 @@ jTableBuild.addMouseListener(new MouseAdapter() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CancelButton;
+    private javax.swing.JPanel NewBuild;
+    private javax.swing.JTable NewBuildTable;
     private javax.swing.JButton btn_editBuild;
     private javax.swing.JPanel buildPanel;
     private javax.swing.JButton goBack;
+    private javax.swing.JButton goBack1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTableBuild;
     private javax.swing.JTable jTableParts;

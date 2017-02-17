@@ -87,6 +87,7 @@ public class user_menu extends javax.swing.JFrame {
     private void initComponents() {
 
         MenuPanel = new javax.swing.JPanel();
+        NewBuild = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -128,14 +129,23 @@ public class user_menu extends javax.swing.JFrame {
         MenuPanel.setPreferredSize(new java.awt.Dimension(900, 700));
         MenuPanel.setLayout(null);
 
+        NewBuild.setText("New BUild");
+        NewBuild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewBuildActionPerformed(evt);
+            }
+        });
+        MenuPanel.add(NewBuild);
+        NewBuild.setBounds(400, 110, 84, 40);
+
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
         jLabel1.setText("MENU");
         MenuPanel.add(jLabel1);
-        jLabel1.setBounds(370, 160, 128, 60);
+        jLabel1.setBounds(370, 160, 145, 60);
 
-        jLabel3.setText("View/Edit builds ");
+        jLabel3.setText("View/Edit builds hjhjjhjh ");
         MenuPanel.add(jLabel3);
-        jLabel3.setBounds(400, 240, 110, 14);
+        jLabel3.setBounds(400, 240, 190, 16);
 
         buildsList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -206,7 +216,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         adminMenu.add(btnAddComp);
-        btnAddComp.setBounds(200, 120, 120, 23);
+        btnAddComp.setBounds(200, 120, 120, 29);
 
         btnCreateBuild.setText("Create Build");
         btnCreateBuild.setMaximumSize(new java.awt.Dimension(117, 23));
@@ -336,27 +346,27 @@ public class user_menu extends javax.swing.JFrame {
 
         jLabel2.setText("Fname");
         ProfilePanel.add(jLabel2);
-        jLabel2.setBounds(70, 110, 70, 14);
+        jLabel2.setBounds(70, 110, 70, 16);
 
         fname.setText("Fname");
         ProfilePanel.add(fname);
-        fname.setBounds(160, 110, 140, 14);
+        fname.setBounds(160, 110, 140, 16);
 
         jLabel4.setText("Sname");
         ProfilePanel.add(jLabel4);
-        jLabel4.setBounds(70, 140, 70, 14);
+        jLabel4.setBounds(70, 140, 70, 16);
 
         sname.setText("Sname");
         ProfilePanel.add(sname);
-        sname.setBounds(160, 140, 160, 14);
+        sname.setBounds(160, 140, 160, 16);
 
         jLabel6.setText("email");
         ProfilePanel.add(jLabel6);
-        jLabel6.setBounds(70, 170, 60, 14);
+        jLabel6.setBounds(70, 170, 60, 16);
 
         email.setText("email");
         ProfilePanel.add(email);
-        email.setBounds(160, 170, 230, 14);
+        email.setBounds(160, 170, 230, 16);
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 48)); // NOI18N
         jLabel5.setText("Profile");
@@ -371,7 +381,7 @@ public class user_menu extends javax.swing.JFrame {
             }
         });
         ProfilePanel.add(goBack);
-        goBack.setBounds(60, 320, 100, 23);
+        goBack.setBounds(60, 320, 100, 29);
 
         getContentPane().add(ProfilePanel);
         ProfilePanel.setBounds(30, 54, 840, 440);
@@ -529,6 +539,15 @@ public class user_menu extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_buildsListMouseClicked
 
+    private void NewBuildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewBuildActionPerformed
+        
+        String username = currentUser.getUsername();
+       
+        view_build frm = new view_build(currentUser); //
+        this.dispose();
+        frm.setVisible(true);
+    }//GEN-LAST:event_NewBuildActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -571,6 +590,7 @@ public class user_menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MenuPanel;
+    private javax.swing.JButton NewBuild;
     private javax.swing.JPanel ProfilePanel;
     private javax.swing.JPanel adminMenu;
     private javax.swing.JButton btnAddComp;

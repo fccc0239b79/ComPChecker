@@ -57,11 +57,11 @@ public class ChangePassword extends javax.swing.JDialog {
         lbloldpassword = new javax.swing.JLabel();
         oldpasswordfield = new javax.swing.JPasswordField();
         buttonChange = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(797, 382));
         setMinimumSize(new java.awt.Dimension(797, 382));
-        setPreferredSize(new java.awt.Dimension(797, 382));
 
         lblConfPassword.setText("Confirm Password:");
 
@@ -76,6 +76,13 @@ public class ChangePassword extends javax.swing.JDialog {
         buttonChange.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonChangeActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -97,12 +104,15 @@ public class ChangePassword extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(passwordfield)
                             .addComponent(passwordconfirmfield, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(oldpasswordfield, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(71, 71, 71)
-                        .addComponent(buttonChange))
+                            .addComponent(oldpasswordfield, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(buttonChange)
+                        .addGap(82, 82, 82)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -121,9 +131,12 @@ public class ChangePassword extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConfPassword)
-                    .addComponent(passwordconfirmfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonChange))
-                .addContainerGap(81, Short.MAX_VALUE))
+                    .addComponent(passwordconfirmfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonChange)
+                    .addComponent(jButton1))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
@@ -166,6 +179,12 @@ public class ChangePassword extends javax.swing.JDialog {
 
 
     }//GEN-LAST:event_buttonChangeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      this.dispose();
+      LogIn frm = new LogIn(); //opens admin user form
+      frm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,6 +230,7 @@ public class ChangePassword extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonChange;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblConfPassword;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblPassword;

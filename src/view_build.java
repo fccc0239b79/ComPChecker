@@ -95,6 +95,8 @@ public class view_build extends javax.swing.JFrame {
        
 jTableBuild.addMouseListener(new MouseAdapter() {
     public void mousePressed(MouseEvent me) {
+        selectPartPanel.setVisible(true);
+        
         JTable table = (JTable) me.getSource();
         Point p = me.getPoint();
         int row = table.rowAtPoint(p);
@@ -259,6 +261,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableParts = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        CancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("1");
@@ -340,7 +343,14 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     jScrollPane3.setViewportView(jTableParts);
 
     jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-    jLabel1.setText("Edit Component");
+    jLabel1.setText("Select Component");
+
+    CancelButton.setText("Cancel");
+    CancelButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            CancelButtonActionPerformed(evt);
+        }
+    });
 
     javax.swing.GroupLayout selectPartPanelLayout = new javax.swing.GroupLayout(selectPartPanel);
     selectPartPanel.setLayout(selectPartPanelLayout);
@@ -348,21 +358,26 @@ jTableBuild.addMouseListener(new MouseAdapter() {
         selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(selectPartPanelLayout.createSequentialGroup()
             .addGap(84, 84, 84)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(87, Short.MAX_VALUE))
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectPartPanelLayout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(301, 301, 301))
+            .addGroup(selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(selectPartPanelLayout.createSequentialGroup()
+                    .addComponent(CancelButton)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(301, 301, 301))
+                .addGroup(selectPartPanelLayout.createSequentialGroup()
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(87, Short.MAX_VALUE))))
     );
     selectPartPanelLayout.setVerticalGroup(
         selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(selectPartPanelLayout.createSequentialGroup()
             .addGap(42, 42, 42)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(selectPartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CancelButton))
             .addGap(18, 18, 18)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(64, Short.MAX_VALUE))
+            .addContainerGap(49, Short.MAX_VALUE))
     );
 
     getContentPane().add(selectPartPanel);
@@ -394,12 +409,18 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     private void btn_editBuildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editBuildActionPerformed
         jTableBuild.enable();
         //height light all rows 
-
+      
     }//GEN-LAST:event_btn_editBuildActionPerformed
 
     private void jTablePartsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePartsMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jTablePartsMouseClicked
+
+    private void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelButtonActionPerformed
+        
+        selectPartPanel.setVisible(false);
+        buildPanel.setVisible(true);
+    }//GEN-LAST:event_CancelButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,6 +458,7 @@ jTableBuild.addMouseListener(new MouseAdapter() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CancelButton;
     private javax.swing.JButton btn_editBuild;
     private javax.swing.JPanel buildPanel;
     private javax.swing.JButton goBack;

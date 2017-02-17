@@ -119,9 +119,10 @@ public class CreateAccount extends javax.swing.JFrame {
         getContentPane().add(passwordconfirmfield);
         passwordconfirmfield.setBounds(316, 147, 178, 20);
 
+        lblCreate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblCreate.setText("Create Account:");
         getContentPane().add(lblCreate);
-        lblCreate.setBounds(361, 63, 100, 14);
+        lblCreate.setBounds(341, 63, 140, 17);
 
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,9 +133,10 @@ public class CreateAccount extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(254, 290, 107, 23);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Welcome!");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(374, 38, 60, 14);
+        jLabel1.setBounds(340, 20, 140, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,7 +223,9 @@ public class CreateAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        LogIn frm = new LogIn(); //opens admin user form
+        frm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
